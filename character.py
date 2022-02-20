@@ -1,6 +1,7 @@
 def Character():
     characterCreation=1
     print("Here we are going to create your character. Dress them up as you like, how you like, etc. Keep in mind the target is to be creative but keep it realistic within fantasy")
+    userName=str(input("What is the name of your character?:"))
     characterAge=eval(input("What is the age of your character?:"))
     race=str(input("What race is your character?:"))
     eyeColorRight=str(input("Right eye color: "))
@@ -20,8 +21,8 @@ def Character():
         characterTraitsC=str(input())
     print("Hm, it appears you have:",characterTraitsA,",",characterTraitsB,", and",characterTraitsC,",","for your traits... I don't know of anyone with those specific traits. I guess there is a first time for everything.")
     characterCreationContinuation= str(input("Are you ready to continue?"))
-    if characterCreationContinuation in ['y', "yes", "Yes"]:
-        print("Great! Enjoy the adventure!")
+    if characterCreationContinuation.lower() in ['y', "yes", "sure", "ok", "okay", "ye", "yep"]:
+        print("Great! Enjoy the adventure!\n")
     else:
         for i in range (characterCreation):
             Character()
